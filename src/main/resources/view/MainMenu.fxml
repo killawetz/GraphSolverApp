@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainMenuController">
+   <children>
+      <Button fx:id="startButton" layoutX="221.0" layoutY="160.0" mnemonicParsing="false" onAction="#clickStart" prefHeight="40.0" prefWidth="137.0" text="Start" />
+      <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="menuBarOpenButton" mnemonicParsing="false" onAction="#clickFileChooser" text="Open" />
+              <MenuItem fx:id="menuBarQuitButton" mnemonicParsing="false" onAction="#closeScene" text="Quit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="helpAboutButton" mnemonicParsing="false" onAction="#clickHelpAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Text layoutX="201.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graph Solver">
+         <font>
+            <Font name="Microsoft PhagsPa Bold" size="29.0" />
+         </font>
+      </Text>
+      <Button fx:id="chooseFileButton" layoutX="221.0" layoutY="240.0" mnemonicParsing="false" onAction="#clickChoose" prefHeight="40.0" prefWidth="137.0" text="Choose File" />
+   </children>
+</AnchorPane>
