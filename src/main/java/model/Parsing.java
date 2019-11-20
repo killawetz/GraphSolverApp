@@ -11,7 +11,7 @@ public class Parsing {
 
     public ArrayList<String> inputStrings = new ArrayList<>();
     public static int countOfNodes; // количество узлов в матрице
-    public static boolean[][] matrix; // считанная с текстового файла матрица
+    public static boolean[][] matrix; // считанная с текстового файла матрица смежности
 
     public static void scanText(File input) throws IOException { // метод для получения текста
         Scanner scan = new Scanner(input);

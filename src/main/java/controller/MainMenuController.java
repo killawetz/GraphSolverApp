@@ -114,17 +114,13 @@ public class MainMenuController {
         closeCurrentScene("MainMenu.fxml", startButton);
     }
 
-    private void createFileExplorer() {
-        FileChooser fileChooser = new FileChooser();
-    }
-
     public void clickFileChooser(ActionEvent actionEvent) throws IOException {
     fileExplorer();
         if (selectedFile != null) {
             openFile(selectedFile);
         }
     }
-                                                                                // Объеденить click и fileexplorer
+
     private void fileExplorer() throws IOException {
         FileChooser fileChooser = new FileChooser();
         fileChooser.getExtensionFilters().addAll(
@@ -140,7 +136,7 @@ public class MainMenuController {
             }
         }
 
-    public void clickHelpAbout(ActionEvent actionEvent) throws IOException { // открытие блокнота при нажатии Help -> About
+    public void clickHelpAbout(ActionEvent actionEvent) throws IOException { // открытие вью при нажатии Help -> About
         Parent root;
         root = FXMLLoader.load(getClass().getResource("/view/HelpAbout.fxml"));
         Stage stage = new Stage();
@@ -150,19 +146,4 @@ public class MainMenuController {
 
 
     }
-
-        /*Desktop desktop = null;
-        if (desktop.isDesktopSupported()) {
-            desktop = desktop.getDesktop();
-        }
-        File file = new File("C:\\Users\\wetzo\\IdeaProjects\\graphSolver\\src\\main\\about.txt");
-        try {
-            desktop.open(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
-
-
 }
-// запихнуть все общие методы в отдельную папку Model
